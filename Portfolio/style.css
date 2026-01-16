@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #020617;
+  color: #e5e7eb;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Cria o efeito de profundidade no site */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 25%, rgba(56,189,248,0.18), transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(99,102,241,0.18), transparent 40%);
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+nav a {
+  font-size: 0.95rem;
+  opacity: 0.75;
+  transition: opacity 0.3s;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Dá o destaque visual da foto com sombra e brilho */
+.profilePic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 28px;
+  box-shadow:
+    0 0 0 4px rgba(56,189,248,0.25),
+    0 25px 70px rgba(0,0,0,0.7);
+}
+
+.hero-content h2 {
+  font-size: clamp(2.8rem, 6vw, 4.2rem);
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 14px;
+  text-shadow: 0 0 45px rgba(56,189,248,0.45);
+}
+
+.hero-content span {
+  color: #38bdf8;
+}
+
+.hero-content p {
+  max-width: 560px;
+  opacity: 0.85;
+  margin-bottom: 36px;
+  font-size: 1.05rem;
+}
+
+.btn {
+  position: relative;
+  padding: 14px 34px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: #020617;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  overflow: hidden;
+  transition: transform 0.35s ease;
+}
+
+/* Efeito de brilho ao passar o mouse */
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 60px rgba(56,189,248,0.8);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+.section {
+  padding: 120px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  scroll-margin-top: 120px;
+}
+
+.section h2 {
+  font-size: 2.3rem;
+  margin-bottom: 36px;
+  color: #38bdf8;
+  text-shadow: 0 0 25px rgba(56,189,248,0.3);
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.skills span {
+  padding: 12px 26px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.skills span:hover {
+  background: rgba(56,189,248,0.2);
+  transform: translateY(-3px);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+/* Cria o efeito de profundidade no site */
+.card {
+  position: relative;
+  padding: 32px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  overflow: hidden;
+  transition: transform 0.45s ease;
+}
+
+/* Efeito de luz ao interagir com o card */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(56,189,248,0.2),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.certifications {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Formulario de contato */
+.contact-form {
+  margin-top: 48px;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  opacity: 0.8;
+}
+
+/* Inputs e textarea estilizados */
+.form-group input,
+.form-group textarea {
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: #e5e7eb;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  resize: none;
+}
+
+/* Efeito ao focar */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 2px solid #38bdf8;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Botão do formulário */
+.contact-form button {
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: #020617;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+}
+
+/* Parte da animação */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 48px;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* Parte responsiva */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 18px;
+  }
+
+  .hero {
+    padding: 32px 24px;
+  }
+
+  .section {
+    padding: 90px 24px;
+  }
+}
+
+.about-list {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0.9;
+}
+
+.about-list li {
+  list-style: none;
+  padding-left: 24px;
+  position: relative;
+  font-size: 1rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.about-list li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #38bdf8;
+}
+
+/* Pequeno efeito de hover para destacar cada item */
+.about-list li:hover {
+  transform: translateX(4px);
+  color: #38bdf8;
+}
