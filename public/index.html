@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patrick Feitoza | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+
+  <header class="hero">
+    <nav>
+      <h1 class="portfolio">
+      &lt;Portfolio &gt; 
+      <button id="modoBtn" onclick="alternarModo(this)"> "Modo Claro" </button> /&gt; 
+      </h1>
+      <ul>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content">
+      <img src="imagem/eu.JPEG" alt="Foto de Patrick Feitoza" class="profilePic">
+      <h2>Patrick Feitoza</h2>
+      <p>Desenvolvedor <span>web</span> em transição ao <span>back-end</span>.</p>
+      <a href="#projects" class="btn">Ver Projetos</a>
+    </div>
+  </header>
+
+  <main>
+
+  <section id="about" class="section">
+  <h2>Sobre mim</h2>
+  <p>
+    Sou desenvolvedor apaixonado por tecnologia e desenvolvimento de software. Graduando em Sistemas de Informação e técnico em Analise e Desenvolvimento de Software.
+    Gosto de transformar ideias em projetos reais, explorar novas linguagens e desafios, e criar soluções que façam a diferença.
+  </p>
+  <ul class="about-list">
+    <li>🎯 Foco em desenvolvimento back-end e aprendizado contínuo</li>
+    <li>💻 Estudo e aplico Java, JavaScript, Node.js e SQL em projetos pessoais</li>
+    <li>🚀 Busca continua de desafios para aprimorar minhas habilidades</li>
+  </ul>
+</section>
+
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Java</span>
+        <span>JavaScript</span>
+        <span>MySql</span>
+        <span>Node.Js (estudando)</span>
+        <span>Cloud Computing (estudando)</span>
+      </div>
+    </section>
+
+    <section id="certifications" class="section">
+      <h2>Formação & Certificações</h2>
+
+      <ul class="certifications">
+        <li>Desenvolvimento de Soluções de Big Data Analytics</li>
+        <li>Programação de Algoritmos Escaláveis</li>
+        <li>Programação para Internet</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projetos</h2>
+      <div class="projects">
+        <div class="card">
+          <h3>Alpha Manage</h3>
+          <p>Sistema de feedback com CRUD em Java e com persistência em banco de dados, focado em organização e controle de demandas.</p>
+        </div>
+        <div class="card">
+          <h3>Print News</h3>
+          <p>Site de notícias criado para mostrar notícias por categoria</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contato</h2>
+
+      <p>Email:
+        <a href="mailto:patricksousafeitoza@hotmail.com">
+          patricksousafeitoza@hotmail.com
+        </a>
+      </p>
+
+      <p>GitHub:
+        <a href="https://github.com/patrickftz" target="_blank">
+          github.com/patrickftz
+        </a>
+      </p>
+
+      <p>LinkedIn:
+        <a href="https://linkedin.com/in/patrickfeitoza" target="_blank">
+          linkedin.com/in/patrickfeitoza
+        </a>
+      </p>
+
+      <form id="contact-form" class="contact-form" method="POST" action="/contato">
+        <div class="form-group">
+          <label for="name">Nome completo</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn" id="submitBtn">Enviar mensagem</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 - Desenvolvido por patrickfeitoza</p>
+  </footer>
+  
+<script src="scripts/script.js"></script>
+</body>
+</html>
